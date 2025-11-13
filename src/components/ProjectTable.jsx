@@ -167,7 +167,7 @@ const ProjectTable = () => {
 
     return (
         <div className="table-container">
-            <h2>Active Projects</h2>
+            <h2>Projects</h2>
             <table className="project-table">
                 <thead>
                 <tr>

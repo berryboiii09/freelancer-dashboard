@@ -107,7 +107,7 @@
         transform: translateY(0);
     }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .nav-bar nav a{
         display: none;
     }
@@ -117,4 +117,22 @@
         border: none;
         cursor: pointer;
     }
+    .nav-bar {
+        position: fixed;   /* instead of sticky */
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;      /* already present, keep it high */
+        background: #fff;   /* ensure it covers content below */
+    }
+    .notification-btn{
+        padding-right: 40px;
+    }
+    /* Add top spacing so content isn't hidden behind the fixed header */
+    .page-content, main, #root > *:not(.nav-bar) {
+        padding-top: 50px;  /* adjust to your actual header height */
+    }
 }
+
+
