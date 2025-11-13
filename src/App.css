@@ -1,0 +1,23 @@
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 2rem 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+.activities-container{
+  background-color: white;
+  border: solid 1px #a8a8a8;
+  padding: 10px;
+  border-radius: 10px;
+}

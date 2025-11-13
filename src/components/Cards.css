@@ -1,0 +1,13 @@
+.card{
+    background-color: white;
+    border: solid 1px #a8a8a8;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-3px);
+}
+.card p,.icon{
+    font-size: 1.5em;
+}

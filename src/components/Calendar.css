@@ -1,0 +1,17 @@
+.react-calendar {
+    border: none;
+    background: white;
+    border-radius: 10px;
+}
+
+.react-calendar__tile--active {
+    background: #007bff !important;
+    color: white !important;
+    border-radius: 8px;
+}
+
+.selected-date {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
