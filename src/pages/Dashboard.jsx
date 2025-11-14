@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext}from "react";
 import Cards from "../components/Cards.jsx";
 import Chart from "../components/Chart.jsx";
 import CalendarCard from "../components/Calender.jsx";
@@ -6,10 +6,15 @@ import Activities from "../components/Activities.jsx";
 import { pieData, barData } from "../data/ChartsData.js";
 import {recentActivities} from "../data/Activities.js";
 import {OverviewData} from "../data/OverviewData.js";
+import {UserContext} from "../context/UserContext.jsx";
 
 const Dashboard = () => {
+    const {user} = useContext(UserContext);
     return (
         <div>
+            <h1 style={{
+                padding: "2rem 0 0 2rem",
+            }}>Welcome Back, {user.username}!</h1>
             <div className="cards">
                 {OverviewData.map((card, index) => (
                     <Cards key={index} {...card} />
