@@ -1,3 +1,4 @@
+/*Navigation Bar*/
 .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -28,14 +29,22 @@
 .nav-bar nav a:hover {
     color: #007bff;
 }
-.menu-btn{
-    display: none;
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.notification-wrapper {
-    position: relative;
-    display: inline-block;
-    margin-left: 15px;
+.nav-profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu-btn{
+    display: none;
 }
 
 .notification-btn {
@@ -54,6 +63,13 @@
 .notification-btn.active {
     color: #007bff;
 }
+/*Notifications*/
+.notification-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+}
+
 .notification-dropdown {
     position: absolute;
     right: 0;
@@ -84,22 +100,10 @@
     background-color: #dff0ff;
     color: #007bff;
 }
-.profile-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.nav-profile-pic {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    object-fit: cover;
-}
 .time{
     font-size: 0.6rem;
 }
-
+/*Animations*/
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -110,6 +114,7 @@
         transform: translateY(0);
     }
 }
+/*Mobile Optimization*/
 @media (max-width: 768px) {
     .nav-bar nav a{
         display: none;

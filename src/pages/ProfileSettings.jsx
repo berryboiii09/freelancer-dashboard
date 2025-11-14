@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import "./ProfileSettings.css";
+import defaultImage from "../assets/man.png"
 
 const ProfileSettings = () => {
     const { user, setUser } = useContext(UserContext);
@@ -33,7 +34,7 @@ const ProfileSettings = () => {
             <form onSubmit={handleSubmit} className="profile-form">
                 <div className="profile-pic-section">
                     <img
-                        src={profilePic || "https://via.placeholder.com/100"}
+                        src={profilePic || defaultImage}
                         alt="Profile"
                         className="profile-pic"
                     />

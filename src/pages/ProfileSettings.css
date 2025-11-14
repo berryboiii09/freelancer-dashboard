@@ -1,11 +1,9 @@
-/* MAIN CONTAINER */
 .profile-settings-container {
     max-width: 520px;
     margin: 2.5rem auto;
     padding: 2.5rem;
 }
 
-/* TITLE */
 .profile-settings-container h2 {
     color: #1a1a1a;
     font-size: 1.6rem;
@@ -13,14 +11,12 @@
     font-weight: 600;
 }
 
-/* FORM */
 .profile-form {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-/* PROFILE PIC */
 .profile-pic-section {
     display: flex;
     flex-direction: column;
@@ -36,7 +32,6 @@
     border: 4px solid #2563eb; /* soft stylish blue */
 }
 
-/* BUTTON - CHANGE PICTURE */
 .upload-btn {
     background-color: #2563eb;
     color: #fff;
@@ -53,7 +48,6 @@
     transform: translateY(-2px);
 }
 
-/* INPUT FIELDS */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -80,7 +74,6 @@
     outline: none;
 }
 
-/* SAVE BUTTON */
 .save-btn {
     background-color: #2563eb;
     color: white;
@@ -98,8 +91,7 @@
     background-color: #1d4ed8;
     transform: translateY(-2px);
 }
-
-/* RESPONSIVE */
+/*Mobile Optimization*/
 @media (max-width: 600px) {
     .profile-settings-container {
         padding: 1.8rem;

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Sidebar.css";
 import {Link} from "react-router-dom";
 import {UserContext} from "../context/UserContext.jsx";
+import defaultImage from "../assets/man.png"
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const { user } = useContext(UserContext);
@@ -16,7 +17,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <li><Link to="/profile" className="profile-link">
                     <div className="profile-info">
                         <img
-                            src={user.profilePic || "https://via.placeholder.com/40"}
+                            src={user.profilePic || defaultImage}
                             alt="User"
                             className="nav-profile-pic"
                         />

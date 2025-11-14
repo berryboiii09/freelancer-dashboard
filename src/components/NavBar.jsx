@@ -5,6 +5,8 @@ import "./NavBar.css";
 import Sidebar from "./Sidebar.jsx";
 import {Link} from "react-router-dom";
 import {UserContext} from "../context/UserContext.jsx";
+import {notifications} from "../data/Notfications.js";
+import defaultImage from "../assets/man.png"
 
 const flex = { display: "flex", flexDirection: "row", justifyContent: "space-between", gap: "10px"};
 const NavBar = () => {
@@ -13,11 +15,6 @@ const NavBar = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    const notifications = [
-        { text: "2 new messages from EduWise", time: "2 hours ago" },
-        { text: "Payment received from CoinPilot ($420)", time: "1 day ago" },
-        { text: "New project proposal from Launchify", time: "2 days ago" },
-    ];
     const toggleSidebar = () => {
         setSidebarOpen(!sidebarOpen);
     };
@@ -49,7 +46,7 @@ const NavBar = () => {
                 <Link to="/profile" className="profile-link">
                     <div className="profile-info">
                         <img
-                            src={user.profilePic || "https://via.placeholder.com/40"}
+                            src={user.profilePic || defaultImage}
                             alt="User"
                             className="nav-profile-pic"
                         />
@@ -57,7 +54,6 @@ const NavBar = () => {
                     </div>
                 </Link>
 
-                {/* Notification button */}
                 <div className="notification-wrapper" ref={dropdownRef}>
                     <button
                         className={`notification-btn ${showNotifications ? "active" : ""}`}
@@ -80,7 +76,7 @@ const NavBar = () => {
             </nav>
         </div>
             <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-            <div className={`overlay ${sidebarOpen ? 'active' : ''}`}></div>
+            <div className={`overlay ${sidebarOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
             </>
     );
 };
