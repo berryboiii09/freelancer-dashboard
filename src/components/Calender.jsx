@@ -7,7 +7,7 @@ const CalendarCard = () => {
     const [date, setDate] = useState(new Date());
 
     return (
-        <div className="chart-card">
+        <div className="calender-card">
             <h2>Calendar</h2>
             <div className="calendar-container">
                 <Calendar onChange={setDate} value={date} />

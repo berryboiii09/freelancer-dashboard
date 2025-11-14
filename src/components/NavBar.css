@@ -5,7 +5,8 @@
     top: 0;
     z-index: 1000;
     background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid #f2f2f2;
     padding: 15px;
     color: #007bff;
 }
@@ -30,7 +31,7 @@
 .menu-btn{
     display: none;
 }
-/* Notification Button and Dropdown */
+
 .notification-wrapper {
     position: relative;
     display: inline-block;
@@ -56,7 +57,7 @@
 .notification-dropdown {
     position: absolute;
     right: 0;
-    top: 30px;
+    top: 55px;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
@@ -72,6 +73,7 @@
     font-size: 0.9rem;
     color: #333;
     border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
 }
 
 .notification-item:last-child {
@@ -79,7 +81,8 @@
 }
 
 .notification-item:hover {
-    background-color: #f8f9fa;
+    background-color: #dff0ff;
+    color: #007bff;
 }
 .profile-info {
     display: flex;
@@ -96,7 +99,7 @@
 .time{
     font-size: 0.6rem;
 }
-/* Small fade-in effect for dropdown */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -117,22 +120,7 @@
         border: none;
         cursor: pointer;
     }
-    .nav-bar {
-        position: fixed;   /* instead of sticky */
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 1000;      /* already present, keep it high */
-        background: #fff;   /* ensure it covers content below */
-    }
-    .notification-btn{
-        padding-right: 40px;
-    }
-    /* Add top spacing so content isn't hidden behind the fixed header */
-    .page-content, main, #root > *:not(.nav-bar) {
-        padding-top: 50px;  /* adjust to your actual header height */
-    }
+
 }
 
 

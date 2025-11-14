@@ -15,9 +15,10 @@
   width: 100%;
   height: 300px;
 }
-.activities-container{
-  background-color: white;
-  border: solid 1px #a8a8a8;
-  padding: 10px;
-  border-radius: 10px;
+.activities-container {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.4rem;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }

@@ -7,5 +7,6 @@
 }
 .activity-card:hover{
     transform: translateY(-3px);
-    background-color: #e6e6e6;
+    background-color: #dff0ff;
+    color: #007bff;
 }
